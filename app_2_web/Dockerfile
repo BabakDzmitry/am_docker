@@ -11,6 +11,4 @@ COPY . /usr/src/app/
 
 EXPOSE 8080
 
-ENV TZ Europe/Minsk
-
 CMD ["python", "app.py"]

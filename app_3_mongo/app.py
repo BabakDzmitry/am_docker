@@ -10,7 +10,7 @@ from storage import MongodbService
 
 def main():
     ip = '192.168.0.50'
-    if os.getenv('ip') not None:
+    if os.getenv('ip'):
         ip = os.getenv('ip')
     print(f'{ip}')
     storage_ = MongodbService.get_instance(ip=ip)

@@ -13,8 +13,8 @@ class MongodbService(object):
             cls.__init__(cls._instance, *args, **kwargs)
         return cls._instance
 
-    def __init__(self):
-        self._client = MongoClient('192.168.0.50', 27017)
+    def __init__(self, *args, **kwargs):
+        self._client = MongoClient(kwargs['ip'], 27017)
         self._db = self._client.youtube_db
 
     def get_data(self):

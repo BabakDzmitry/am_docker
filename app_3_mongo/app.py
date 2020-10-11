@@ -1,6 +1,7 @@
 from uuid import uuid4
 from pathlib import Path
 import sys
+import os
 
 main_path = Path(__file__).resolve().parent
 sys.path.insert(0, main_path)
@@ -8,7 +9,8 @@ from storage import MongodbService
 
 
 def main():
-    storage_ = MongodbService.get_instance()
+    ip = os.getenv('ip')
+    storage_ = MongodbService.get_instance(ip=ip)
     for _ in range(5):
         dto = {
             "_id": str(uuid4()),

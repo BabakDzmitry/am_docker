@@ -14,7 +14,7 @@ class MongodbService(object):
         return cls._instance
 
     def __init__(self):
-        self._client = MongoClient('localhost', 27017)
+        self._client = MongoClient('0.0.0.0', 27017)
         self._db = self._client.youtube_db
 
     def get_data(self):

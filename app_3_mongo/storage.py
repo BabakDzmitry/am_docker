@@ -14,6 +14,7 @@ class MongodbService(object):
         return cls._instance
 
     def __init__(self, *args, **kwargs):
+        print(f'ip = {kwargs["ip"]}')
         self._client = MongoClient(kwargs['ip'], 27017)
         self._db = self._client.youtube_db
 

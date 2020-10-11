@@ -10,6 +10,7 @@ from storage import MongodbService
 
 def main():
     ip = os.getenv('ip')
+    print(f'{ip}')
     storage_ = MongodbService.get_instance(ip=ip)
     for _ in range(5):
         dto = {

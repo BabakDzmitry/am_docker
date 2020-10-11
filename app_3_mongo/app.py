@@ -3,7 +3,7 @@ from pathlib import Path
 import sys
 
 main_path = Path(__file__).resolve().parent
-sys.path.insert(0,main_path)
+sys.path.insert(0, main_path)
 from storage import MongodbService
 
 
